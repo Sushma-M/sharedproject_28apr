@@ -360,6 +360,16 @@
     "operation" : "gotoPage",
     "pageName" : "Main"
   },
+  "goToPage_TestDefaultPrefabs" : {
+    "_id" : "wm-goToPage_TestDefaultPrefabs-wm.NavigationVariable-1461834195221",
+    "name" : "goToPage_TestDefaultPrefabs",
+    "owner" : "App",
+    "category" : "wm.NavigationVariable",
+    "dataBinding" : [ ],
+    "operation" : "gotoPage",
+    "pageName" : "TestDefaultPrefabs",
+    "pageTransitions" : "none"
+  },
   "supportedLocale" : {
     "_id" : "wm-wm.Variable1402640443182",
     "name" : "supportedLocale",
