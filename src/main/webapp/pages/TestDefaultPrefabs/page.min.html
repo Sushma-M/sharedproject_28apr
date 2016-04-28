@@ -50,11 +50,11 @@ var _TestDefaultPrefabsPage_Variables_ ={}
                         <wm-composite name="composite1">
                             <wm-label class="col-md-3 control-label" name="label1" caption="URL:"></wm-label>
                             <wm-container class="col-md-9" name="container1">
-                                <wm-text name="text1" type="url"></wm-text>
+                                <wm-text name="te" type="url" placeholder="Enter URL"></wm-text>
                             </wm-container>
                         </wm-composite>
                         <wm-label name="label2" caption="EX: http://www.youtube.com/embed/N1umLw5I3As"></wm-label>
-                        <wm-prefab prefabname="youtube" name="youtube1" youtubeurl="bind:Widgets.text1.datavalue"></wm-prefab>
+                        <wm-prefab prefabname="youtube" name="youtube1" youtubeurl="bind:Widgets.forurl.datavalue"></wm-prefab>
                     </wm-tabcontent>
                 </wm-tabpane>
             </wm-tabs>
