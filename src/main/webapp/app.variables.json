@@ -1,4 +1,209 @@
 {
+  "appNotification" : {
+    "_id" : "wm-appErrorHandler-wm.NotificationVariable-1454664620943",
+    "name" : "appNotification",
+    "owner" : "App",
+    "category" : "wm.NotificationVariable",
+    "dataBinding" : [ {
+      "target" : "class",
+      "value" : "Error",
+      "type" : "list"
+    }, {
+      "target" : "toasterPosition",
+      "value" : "bottom right",
+      "type" : "list"
+    } ],
+    "operation" : "toast"
+  },
+  "CalculatorAdd" : {
+    "_id" : "wm-CalculatorAdd-wm.ServiceVariable-1461824203381",
+    "name" : "CalculatorAdd",
+    "owner" : "App",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "Add.intA",
+      "value" : "bind:Widgets.text1.datavalue"
+    }, {
+      "target" : "Add.intB",
+      "value" : "bind:Widgets.text2.datavalue"
+    } ],
+    "type" : "com.sharedproject_28apr.services.calculator.AddResponse",
+    "service" : "Calculator",
+    "operation" : "add",
+    "operationType" : "post",
+    "serviceType" : "SoapService",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/calculator/add",
+      "httpMethod" : "post",
+      "name" : "add",
+      "produces" : [ "application/xml", "application/json" ],
+      "parameters" : [ {
+        "name" : "Add",
+        "parameterType" : "body"
+      } ]
+    },
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "isList" : false,
+    "firstRow" : 0,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "controller" : "Calculator"
+  },
+  "CalculatorDivide" : {
+    "_id" : "wm-CalculatorDivide-wm.ServiceVariable-1461824203386",
+    "name" : "CalculatorDivide",
+    "owner" : "App",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "intA",
+      "value" : "bind:Widgets.text1.datavalue",
+      "type" : "integer"
+    }, {
+      "target" : "intB",
+      "value" : "bind:Widgets.text2.datavalue",
+      "type" : "integer"
+    } ],
+    "type" : "com.sharedproject_28apr.services.calculator.DivideResponse",
+    "service" : "Calculator",
+    "operation" : "divide",
+    "operationType" : "get",
+    "serviceType" : "SoapService",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/calculator/divide",
+      "httpMethod" : "get",
+      "name" : "divide",
+      "produces" : [ "application/xml", "application/json" ],
+      "parameters" : [ {
+        "name" : "intA",
+        "parameterType" : "query",
+        "type" : "integer"
+      }, {
+        "name" : "intB",
+        "parameterType" : "query",
+        "type" : "integer"
+      } ]
+    },
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "isList" : false,
+    "firstRow" : 0,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "controller" : "Calculator"
+  },
+  "CalculatorMultiply" : {
+    "_id" : "wm-CalculatorMultiply-wm.ServiceVariable-1461824203386",
+    "name" : "CalculatorMultiply",
+    "owner" : "App",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "intA",
+      "value" : "bind:Widgets.text1.datavalue",
+      "type" : "integer"
+    }, {
+      "target" : "intB",
+      "value" : "bind:Widgets.text2.datavalue",
+      "type" : "integer"
+    } ],
+    "type" : "com.sharedproject_28apr.services.calculator.MultiplyResponse",
+    "service" : "Calculator",
+    "operation" : "multiply",
+    "operationType" : "get",
+    "serviceType" : "SoapService",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/calculator/multiply",
+      "httpMethod" : "get",
+      "name" : "multiply",
+      "produces" : [ "application/xml", "application/json" ],
+      "parameters" : [ {
+        "name" : "intA",
+        "parameterType" : "query",
+        "type" : "integer"
+      }, {
+        "name" : "intB",
+        "parameterType" : "query",
+        "type" : "integer"
+      } ]
+    },
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "isList" : false,
+    "firstRow" : 0,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "controller" : "Calculator"
+  },
+  "CalculatorSubtract" : {
+    "_id" : "wm-CalculatorSubtract-wm.ServiceVariable-1461824203387",
+    "name" : "CalculatorSubtract",
+    "owner" : "App",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "intA",
+      "value" : "bind:Widgets.text1.datavalue",
+      "type" : "integer"
+    }, {
+      "target" : "intB",
+      "value" : "bind:Widgets.text2.datavalue",
+      "type" : "integer"
+    } ],
+    "type" : "com.sharedproject_28apr.services.calculator.SubtractResponse",
+    "service" : "Calculator",
+    "operation" : "subtract",
+    "operationType" : "get",
+    "serviceType" : "SoapService",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/calculator/subtract",
+      "httpMethod" : "get",
+      "name" : "subtract",
+      "produces" : [ "application/xml", "application/json" ],
+      "parameters" : [ {
+        "name" : "intA",
+        "parameterType" : "query",
+        "type" : "integer"
+      }, {
+        "name" : "intB",
+        "parameterType" : "query",
+        "type" : "integer"
+      } ]
+    },
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "isList" : false,
+    "firstRow" : 0,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "controller" : "Calculator"
+  },
   "goToPage_Main" : {
     "_id" : "wm-wm.NavigationVariable1389180517517",
     "name" : "goToPage_Main",
@@ -18,24 +223,5 @@
     "type" : "string",
     "isList" : false,
     "saveInPhonegap" : false
-  },
-  "appNotification": {
-      "_id": "wm-appErrorHandler-wm.NotificationVariable-1454664620943",
-      "name": "appNotification",
-      "owner": "App",
-      "category": "wm.NotificationVariable",
-      "dataBinding": [
-        {
-          "target": "class",
-          "value": "Error",
-          "type": "list"
-        },
-        {
-          "target": "toasterPosition",
-          "value": "bottom right",
-          "type": "list"
-        }
-      ],
-      "operation": "toast"
-    }
+  }
 }

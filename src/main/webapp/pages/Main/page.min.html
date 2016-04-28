@@ -30,6 +30,41 @@ var _MainPage_Variables_ ={}
     <wm-content name="content">
         <wm-left-panel columnwidth="2" name="leftpanel" content="leftnav"></wm-left-panel>
         <wm-page-content columnwidth="8" paddingleft="15" paddingright="15" name="mainContent">
+            <wm-tabs name="tabs1">
+                <wm-tabpane name="tabpane1">
+                    <wm-tabheader name="tabheader1" heading="Soap Service"></wm-tabheader>
+                    <wm-tabcontent name="tabcontent1">
+                        <wm-composite name="composite1">
+                            <wm-label class="col-md-3 control-label" name="label1" caption="int A"></wm-label>
+                            <wm-container class="col-md-9" name="container1">
+                                <wm-text name="text1"></wm-text>
+                            </wm-container>
+                        </wm-composite>
+                        <wm-composite name="composite2">
+                            <wm-label class="col-md-3 control-label" name="label2" caption="int B"></wm-label>
+                            <wm-container class="col-md-9" name="container2">
+                                <wm-text name="text2"></wm-text>
+                            </wm-container>
+                        </wm-composite>
+                        <wm-container name="container3" margintop="10" marginbottom="10" paddingtop="10" paddingbottom="10">
+                            <wm-label name="label3" caption="Add Result:" paddingright="10"></wm-label>
+                            <wm-label name="label7" caption="bind:Variables.CalculatorAdd.dataSet.addResult"></wm-label>
+                        </wm-container>
+                        <wm-container margintop="10" marginbottom="10" paddingtop="10" paddingbottom="10" name="container6">
+                            <wm-label name="label4" caption="Divide Result:" paddingright="10"></wm-label>
+                            <wm-label name="label8" caption="bind:Variables.CalculatorDivide.dataSet.divideResult"></wm-label>
+                        </wm-container>
+                        <wm-container margintop="10" marginbottom="10" paddingtop="10" paddingbottom="10" name="container7">
+                            <wm-label name="label5" caption="Substract Result:" paddingright="10"></wm-label>
+                            <wm-label name="label9" caption="bind:Variables.CalculatorSubtract.dataSet.subtractResult"></wm-label>
+                        </wm-container>
+                        <wm-container margintop="10" marginbottom="10" paddingtop="10" paddingbottom="10" name="container8">
+                            <wm-label name="label6" caption="Divide Result:" paddingright="10"></wm-label>
+                            <wm-label name="label10" caption="bind:Variables.CalculatorMultiply.dataSet.multiplyResult"></wm-label>
+                        </wm-container>
+                    </wm-tabcontent>
+                </wm-tabpane>
+            </wm-tabs>
         </wm-page-content>
         <wm-right-panel columnwidth="2" name="rightpanel" content="rightnav"></wm-right-panel>
     </wm-content>
