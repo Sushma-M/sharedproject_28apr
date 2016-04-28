@@ -38,6 +38,40 @@
                         </wm-container>
                     </wm-tabcontent>
                 </wm-tabpane>
+                <wm-tabpane name="tabpane2">
+                    <wm-tabheader name="tabheader2" heading="Feed service with authentication"></wm-tabheader>
+                    <wm-tabcontent name="tabcontent2">
+                        <wm-grid readonlygrid="true" dataset="bind:Variables.FeedServiceGetFeedWithHttpConfig.dataSet" navigation="Basic" name="grid2">
+                            <wm-grid-column binding="author" caption="Author" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                            <wm-grid-column binding="title" caption="Title" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                            <wm-grid-column binding="description" caption="Description" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                            <wm-grid-column binding="feedType" caption="Feed Type" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                            <wm-grid-column binding="link" caption="Link" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                            <wm-grid-column binding="encoding" caption="Encoding" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                            <wm-grid-column binding="entries[0].author" caption="Entries[0] Author" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                            <wm-grid-column binding="entries[0].title" caption="Entries[0] Title" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                            <wm-grid-column binding="entries[0].description" caption="Entries[0] Description" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                            <wm-grid-column binding="entries[0].updatedDate" caption="Entries[0] Updated Date" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                        </wm-grid>
+                    </wm-tabcontent>
+                </wm-tabpane>
+                <wm-tabpane name="tabpane3">
+                    <wm-tabheader name="tabheader3" heading="Feed service without authentiation"></wm-tabheader>
+                    <wm-tabcontent name="tabcontent3">
+                        <wm-grid readonlygrid="true" dataset="bind:Variables.FeedServiceGetFeed.dataSet" navigation="Basic" name="grid3">
+                            <wm-grid-column binding="author" caption="Author" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                            <wm-grid-column binding="title" caption="Title" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                            <wm-grid-column binding="description" caption="Description" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                            <wm-grid-column binding="feedType" caption="Feed Type" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                            <wm-grid-column binding="link" caption="Link" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                            <wm-grid-column binding="encoding" caption="Encoding" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                            <wm-grid-column binding="entries[0].author" caption="Entries[0] Author" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                            <wm-grid-column binding="entries[0].title" caption="Entries[0] Title" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                            <wm-grid-column binding="entries[0].description" caption="Entries[0] Description" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                            <wm-grid-column binding="entries[0].updatedDate" caption="Entries[0] Updated Date" pcdisplay="true" mobiledisplay="true" readonly="true"></wm-grid-column>
+                        </wm-grid>
+                    </wm-tabcontent>
+                </wm-tabpane>
             </wm-tabs>
         </wm-page-content>
         <wm-right-panel columnwidth="2" name="rightpanel" content="rightnav"></wm-right-panel>

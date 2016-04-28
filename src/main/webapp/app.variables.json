@@ -204,6 +204,154 @@
     "isDefault" : true,
     "controller" : "Calculator"
   },
+  "FeedServiceGetFeed" : {
+    "_id" : "wm-FeedServiceGetFeed-wm.ServiceVariable-1461824778132",
+    "name" : "FeedServiceGetFeed",
+    "owner" : "App",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "feedURL",
+      "value" : "http://sports.espn.go.com/espn/rss/news",
+      "type" : "string"
+    } ],
+    "type" : "com.wavemaker.runtime.feed.model.Feed",
+    "service" : "FeedService",
+    "operation" : "getFeed",
+    "operationType" : "get",
+    "serviceType" : "FeedService",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/feed",
+      "httpMethod" : "get",
+      "name" : "getFeed",
+      "parameters" : [ {
+        "name" : "feedURL",
+        "parameterType" : "query",
+        "type" : "string"
+      } ]
+    },
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "isList" : false,
+    "firstRow" : 0,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "controller" : "FeedService"
+  },
+  "FeedServiceGetFeedWithHttpConfig" : {
+    "_id" : "wm-FeedServiceGetFeedWithHttpConfig-wm.ServiceVariable-1461824778136",
+    "name" : "FeedServiceGetFeedWithHttpConfig",
+    "owner" : "App",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "feedURL",
+      "value" : "https://mail.google.com/mail/feed/atom",
+      "type" : "string"
+    }, {
+      "target" : "httpBasicAuthUsername",
+      "value" : "wavemaker.apps@gmail.com",
+      "type" : "string"
+    }, {
+      "target" : "httpBasicAuthPassword",
+      "value" : "pramati123",
+      "type" : "string"
+    }, {
+      "target" : "connectionTimeout",
+      "value" : "1000",
+      "type" : "integer"
+    } ],
+    "type" : "com.wavemaker.runtime.feed.model.Feed",
+    "service" : "FeedService",
+    "operation" : "getFeedWithHttpConfig",
+    "operationType" : "get",
+    "serviceType" : "FeedService",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/feed/auth",
+      "httpMethod" : "get",
+      "name" : "getFeedWithHttpConfig",
+      "parameters" : [ {
+        "name" : "feedURL",
+        "parameterType" : "query",
+        "type" : "string"
+      }, {
+        "name" : "httpBasicAuthUsername",
+        "parameterType" : "query",
+        "type" : "string"
+      }, {
+        "name" : "httpBasicAuthPassword",
+        "parameterType" : "query",
+        "type" : "string"
+      }, {
+        "name" : "connectionTimeout",
+        "parameterType" : "query",
+        "type" : "integer"
+      } ]
+    },
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "isList" : false,
+    "firstRow" : 0,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "controller" : "FeedService"
+  },
+  "GoogleInvoke" : {
+    "_id" : "wm-GoogleInvoke-wm.ServiceVariable-1461824896750",
+    "name" : "GoogleInvoke",
+    "owner" : "App",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "Authorization",
+      "value" : "Basic d2F2ZW1ha2VyLmFwcHNAZ21haWwuY29tOnByYW1hdGkxMjM=",
+      "type" : "java.lang.String"
+    } ],
+    "type" : "google.feed",
+    "service" : "google",
+    "operation" : "invoke",
+    "operationType" : "get",
+    "serviceType" : "RestService",
+    "wmServiceOperationInfo" : {
+      "relativePath" : "/google/invoke",
+      "httpMethod" : "get",
+      "name" : "invoke",
+      "authorization" : "basic",
+      "consumes" : [ "text/xml" ],
+      "parameters" : [ {
+        "name" : "wm_auth_username",
+        "parameterType" : "auth"
+      }, {
+        "name" : "wm_auth_password",
+        "parameterType" : "auth"
+      } ]
+    },
+    "dataSet" : {
+      "dataValue" : ""
+    },
+    "isList" : false,
+    "firstRow" : 0,
+    "maxResults" : 20,
+    "designMaxResults" : 10,
+    "startUpdate" : false,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "isDefault" : true,
+    "controller" : "RestServiceVirtual"
+  },
   "goToPage_Main" : {
     "_id" : "wm-wm.NavigationVariable1389180517517",
     "name" : "goToPage_Main",

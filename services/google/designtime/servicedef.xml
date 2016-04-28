@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<service xmlns="http://www.activegrid.com/namespaces/ServiceDefinitions/1.0" id="google" type="RestService" springFile="google.spring.xml">
+    <operation name="invoke">
+        <return typeRef="google.feed" isList="false"/>
+    </operation>
+    <dataobjects>
+        <dataobject javaType="google.author" name="author" supportsQuickData="false">
+            <element name="email" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="name" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="google.entryEntryItem" name="entryEntryItem" supportsQuickData="false">
+            <element name="id" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="summary" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="author" typeRef="google.author" isList="false" allowNull="false"/>
+            <element name="title" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="contributor" typeRef="google.contributor" isList="false" allowNull="false"/>
+            <element name="issued" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="link" typeRef="google.link" isList="false" allowNull="false"/>
+            <element name="modified" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="google.contributor" name="contributor" supportsQuickData="false">
+            <element name="email" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="name" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="google.feed" name="feed" supportsQuickData="false">
+            <element name="title" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="fullcount" typeRef="java.lang.Integer" isList="false" allowNull="false"/>
+            <element name="entry" typeRef="google.entryEntryItem" isList="true" allowNull="false"/>
+            <element name="link" typeRef="google.link" isList="false" allowNull="false"/>
+            <element name="xmlns" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="modified" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="tagline" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="version" typeRef="java.lang.Double" isList="false" allowNull="false"/>
+        </dataobject>
+        <dataobject javaType="google.link" name="link" supportsQuickData="false">
+            <element name="rel" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="type" typeRef="java.lang.String" isList="false" allowNull="false"/>
+            <element name="href" typeRef="java.lang.String" isList="false" allowNull="false"/>
+        </dataobject>
+    </dataobjects>
+</service>

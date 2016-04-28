@@ -1,0 +1,153 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "2.0",
+    "x-WM-SERVICE_TYPE" : "RestService",
+    "x-WM-API_ID" : "361f98cb-e654-476f-a0bd-cbc8ef27f375",
+    "x-WM-SERVICE_ID" : "google"
+  },
+  "host" : "mail.google.com",
+  "tags" : [ {
+    "name" : "RestServiceVirtualController",
+    "description" : "Rest service swagger documentation"
+  } ],
+  "schemes" : [ "https" ],
+  "paths" : {
+    "/google/invoke" : {
+      "get" : {
+        "tags" : [ "RestServiceVirtualController" ],
+        "operationId" : "RestServiceVirtualController-invoke",
+        "consumes" : [ "text/xml" ],
+        "responses" : {
+          "200" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/feed"
+            }
+          }
+        },
+        "security" : [ {
+          "WM_Rest_Service_Authorization" : [ ]
+        } ],
+        "x-WM-OPERATION_UID" : "f64e1503-9109-4aeb-9231-7394550fd264",
+        "x-WM-METHOD_NAME" : "invoke",
+        "x-WM-ACCESS_SPECIFIER" : "APP_ONLY"
+      },
+      "x-WM-BASE_PATH" : "/google/invoke",
+      "x-WM-TAG" : "RestServiceVirtualController",
+      "x-WM-RELATIVE_PATH" : ""
+    }
+  },
+  "securityDefinitions" : {
+    "WM_Rest_Service_Authorization" : {
+      "type" : "basic"
+    }
+  },
+  "definitions" : {
+    "author" : {
+      "properties" : {
+        "email" : {
+          "type" : "string"
+        },
+        "name" : {
+          "type" : "string"
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "google.author",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ]
+    },
+    "contributor" : {
+      "properties" : {
+        "email" : {
+          "type" : "string"
+        },
+        "name" : {
+          "type" : "string"
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "google.contributor",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ]
+    },
+    "link" : {
+      "properties" : {
+        "rel" : {
+          "type" : "string"
+        },
+        "type" : {
+          "type" : "string"
+        },
+        "href" : {
+          "type" : "string"
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "google.link",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ]
+    },
+    "feed" : {
+      "properties" : {
+        "title" : {
+          "type" : "string"
+        },
+        "fullcount" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "link" : {
+          "$ref" : "#/definitions/link"
+        },
+        "entry" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/entryEntryItem"
+          },
+          "x-WM-IS_LIST" : true
+        },
+        "xmlns" : {
+          "type" : "string"
+        },
+        "version" : {
+          "type" : "number",
+          "format" : "double"
+        },
+        "tagline" : {
+          "type" : "string"
+        },
+        "modified" : {
+          "type" : "string"
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "google.feed",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ]
+    },
+    "entryEntryItem" : {
+      "properties" : {
+        "summary" : {
+          "type" : "string"
+        },
+        "id" : {
+          "type" : "string"
+        },
+        "author" : {
+          "$ref" : "#/definitions/author"
+        },
+        "title" : {
+          "type" : "string"
+        },
+        "contributor" : {
+          "$ref" : "#/definitions/contributor"
+        },
+        "link" : {
+          "$ref" : "#/definitions/link"
+        },
+        "issued" : {
+          "type" : "string"
+        },
+        "modified" : {
+          "type" : "string"
+        }
+      },
+      "x-WM-FULLY_QUALIFIED_NAME" : "google.entryEntryItem",
+      "x-WM-TAGS" : [ "RestServiceVirtualController" ]
+    }
+  }
+}
